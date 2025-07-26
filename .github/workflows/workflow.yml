@@ -1,0 +1,12 @@
+name: Auto Run Simulation
+
+on:
+  push:  # ❗รันทันทีเมื่อมีใคร push อะไรลง branch main
+
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Run simulation
+      run: python simulated_threat_structures.py
